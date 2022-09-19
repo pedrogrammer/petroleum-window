@@ -1,0 +1,526 @@
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Vazirmatn', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
+}
+
+body,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+#header-image-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+	background-color: #dddddd;
+	height: 100px;
+}
+
+.header-image {
+	height: 100%;
+}
+
+.ministry-of-petroleum-logo > img {
+	height: 100%;
+}
+
+.header-graphic-element {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: calc(50% - 162px);
+	font-family: 'Noto Nastaliq Urdu', serif;
+	font-size: 1.4rem;
+	color: #110979;
+}
+
+.header-graphic-element > img {
+	position: absolute;
+	max-width: 300px;
+}
+
+.islamic-republic-of-iran-flag > img {
+	height: 100%;
+}
+
+header > nav {
+	background-color: #00377b;
+	padding: 1rem 0 1rem 0;
+}
+
+header #hamburger-btn {
+	display: none;
+	width: min-content;
+}
+
+nav > ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
+	list-style-type: none;
+}
+
+#side-navigation {
+	transition: right 1s;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+		rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	padding: 1rem;
+	position: absolute;
+	z-index: 3;
+	width: 50%;
+	right: -50%;
+	border-radius: 20px;
+	top: 1%;
+	height: 30%;
+	background: rgb(96, 184, 254);
+	background: -moz-linear-gradient(
+		0deg,
+		rgba(96, 184, 254, 1) 0%,
+		rgba(254, 254, 254, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		0deg,
+		rgba(96, 184, 254, 1) 0%,
+		rgba(254, 254, 254, 1) 100%
+	);
+	background: linear-gradient(
+		0deg,
+		rgba(96, 184, 254, 1) 0%,
+		rgba(254, 254, 254, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#60b8fe",endColorstr="#fefefe",GradientType=1);
+}
+
+#side-navigation nav ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 !important;
+}
+
+#side-navigation nav li img {
+	max-width: 80px;
+	padding-bottom: 0.3rem;
+}
+
+#side-navigation nav li {
+	display: contents;
+}
+
+#side-navigation #bordered-li {
+	border-top: 1px solid #b4deff;
+	border-bottom: 1px solid #b4deff;
+}
+
+#side-navigation a {
+	width: 100%;
+	justify-content: flex-start;
+	padding: 0.5rem 0 0.5rem 0;
+	color: #002b60;
+}
+
+#drop-shadow {
+	transition: display 10ms;
+	display: none;
+	position: absolute;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.35);
+}
+
+nav > ul a {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	justify-content: center;
+	color: #ccd7e5;
+}
+
+nav > ul a svg {
+	max-width: 20px;
+}
+
+nav > ul a:hover {
+	color: #007bff;
+}
+
+#hero {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	padding-top: 18rem;
+	margin-bottom: 2rem;
+}
+
+#slider {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 398px;
+	overflow: hidden;
+}
+
+#slider #images-wrapper {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	overflow: hidden;
+	position: absolute;
+	width: 600%;
+	height: 100%;
+	right: 0;
+	transition: right 0.8s linear 0.8s;
+}
+
+#slider #images-wrapper img {
+	width: 100%;
+}
+
+.piecemeal-transparent {
+	width: 100%;
+	height: 150px;
+	position: absolute;
+	bottom: 0;
+	z-index: 0;
+	background: rgb(255, 255, 255);
+	background: -moz-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(0, 212, 255, 0) 100%
+	);
+	background: -webkit-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(0, 212, 255, 0) 100%
+	);
+	background: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(0, 212, 255, 0) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#00d4ff",GradientType=1);
+}
+
+.piecemeal-transparent.inside-images-wrapper {
+	display: none;
+}
+
+#hero #service-boxes {
+	display: grid;
+	grid-template-columns: repeat(4, 22%);
+	justify-content: space-between;
+	row-gap: 2.3rem;
+	z-index: 1;
+	width: 60%;
+	height: max-content;
+	margin: 0 auto;
+}
+
+#hero #service-boxes > a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.7rem;
+	padding: 1rem;
+	font-weight: bold;
+	color: #2f2f2e;
+	border-radius: 35px;
+	transition: all 0.15s ease-in-out;
+	background-color: rgba(221, 221, 221, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+		rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#hero #service-boxes > a:hover {
+	transform: scale(1.03);
+}
+
+#hero #service-boxes > a > div {
+	text-align: center;
+}
+
+#hero #service-boxes > a > img {
+	max-width: 100px;
+}
+
+footer {
+	padding: 0.5rem 2rem;
+	margin-top: auto;
+	color: #fff;
+	background-color: #00377b;
+}
+
+#footer-menu {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+
+#footer-menu a {
+	display: block;
+	color: #fff;
+	margin: 1em 0 1em 0;
+	font-size: 14px;
+}
+
+#footer-menu h2 {
+	width: 81%;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+#footer-menu hr {
+	width: 81%;
+	margin-right: 0;
+}
+
+#footer-menu img {
+	max-width: 390px;
+}
+
+#footer-menu p {
+	font-size: 14px;
+}
+
+#footer-menu .lightblue {
+	color: #8fa7c5;
+}
+
+#copyright {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
+	border-top: 1px solid #fff;
+}
+
+#copyright .blue {
+	color: #2086e9;
+}
+
+@media screen and (min-width: 375px) {
+	#slider {
+		height: 147px;
+	}
+}
+
+@media screen and (min-width: 575px) {
+	#slider {
+		height: 218px;
+	}
+}
+
+@media screen and (min-width: 775px) {
+	#slider {
+		height: 305px;
+	}
+}
+
+@media screen and (min-width: 975px) {
+	#slider {
+		height: 384px;
+	}
+}
+
+@media screen and (min-width: 1180px) {
+	#slider {
+		height: 465px;
+	}
+}
+
+@media screen and (min-width: 1355px) {
+	#slider #images-wrapper img {
+		object-position: 0 -4rem;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	#slider #images-wrapper img {
+		object-position: 0 -8rem;
+	}
+}
+
+@media screen and (min-width: 1700px) {
+	#slider #images-wrapper img {
+		object-position: 0 -11rem;
+	}
+}
+
+@media screen and (min-width: 2670px) {
+	#slider {
+		height: 735px;
+	}
+}
+
+@media screen and (max-width: 605px) {
+	#header-image-section {
+		height: max-content;
+	}
+
+	.header-image > img {
+		width: 100%;
+		height: auto;
+	}
+
+	.ministry-of-petroleum-logo {
+		display: inline-flex;
+	}
+
+	.ministry-of-petroleum-logo > img {
+		max-width: 50px;
+	}
+
+	.islamic-republic-of-iran-flag {
+		display: inline-flex;
+	}
+
+	.islamic-republic-of-iran-flag > img {
+		max-width: 120px;
+	}
+
+	.header-graphic-element {
+		left: calc(50% - 81px);
+	}
+
+	.header-graphic-element > img {
+		max-width: 148px;
+	}
+
+	.header-graphic-element > div {
+		font-size: 0.7rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#hero {
+		padding-top: 3rem;
+	}
+
+	#hero #service-boxes {
+		display: flex;
+		flex-direction: column;
+		row-gap: 25px;
+	}
+
+	#hero #service-boxes > a {
+		width: 100%;
+		padding: 0.5rem;
+	}
+
+	#hero #service-boxes > a > div {
+		font-size: 1.1rem;
+	}
+
+	#hero .service-box {
+		width: auto;
+	}
+
+	#footer-menu {
+		grid-template-columns: auto;
+	}
+
+	#footer-menu #motto-logo {
+		display: flex;
+		justify-content: center;
+	}
+
+	nav > ul {
+		justify-content: space-between;
+		padding: 0 0.8rem;
+	}
+
+	header #hamburger-btn {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	header #hamburger-btn > div {
+		background-color: #fff;
+		width: 25px;
+		height: 3px;
+	}
+
+	header .hamburger-menu-item {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	nav > ul a {
+		font-size: 0.79rem;
+	}
+
+	#hero #service-boxes {
+		width: 86%;
+	}
+
+	#hero #service-boxes > a > img {
+		max-width: 85px;
+	}
+
+	#hero #service-boxes > a > div {
+		font-size: 0.8rem;
+	}
+
+	#footer-menu h2 {
+		font-size: 0.9rem;
+	}
+
+	#footer-menu a {
+		font-size: 11px;
+	}
+
+	#footer-menu p {
+		font-size: 11px;
+	}
+
+	#footer-menu img {
+		max-width: 300px;
+	}
+
+	#copyright {
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (max-width: 1260px) {
+	.piecemeal-transparent.inside-images-wrapper {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1354px) {
+	#slider #images-wrapper img {
+		object-position: 0 -1rem;
+	}
+}
+
+@media screen and (max-width: 1460px) {
+	#hero #service-boxes {
+		width: 80%;
+	}
+}
